@@ -1,5 +1,5 @@
 //% color="#AA278D"
-namespace Counters {
+namespace ECV {
     //%
     export class counter { 
          millis:number;
@@ -10,7 +10,7 @@ namespace Counters {
             this.interval_set=false;
          }
         
-    //% block="$this(counter) count until $interval and restart"
+    //% block="$this(counter) compte $interval secs. et redémarre"
     //% handlerStatement
     public onEventAsStatement(interval: number, handler: () => void) {
         if(this.interval_set==false){
@@ -26,8 +26,8 @@ namespace Counters {
 
     }
 
-    //% block="create counters"
-    //% blockSetVariable=counter
+    //% block="Créer compteur"
+    //% blockSetVariable=Compteur
     export function createCounters(): counter {
         return new counter();
     }
